@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AngularJS Hello Comoyo Test</title>
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+    <style>
+      body {
+        padding-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div ng-app="myApp">
+      <div ng-controller="MovieCtrl">
+        <input type="text" ng-model="searchText.expanded">
+        <table class="table table-bordered">
+          <tr>
+            <th>Title</th>
+          </tr>
+          <tr ng-repeat="movie in movies | filter:searchText | orderBy:'expanded.title'">
+            <td>{{movie.expanded.title}}</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
