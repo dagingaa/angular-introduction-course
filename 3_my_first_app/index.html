@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AngularJS Hello Comoyo Test</title>
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+    <style>
+      body {
+        padding-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div ng-app="myApp">
+      <div ng-controller="FirstCtrl">
+        <input type="text" ng-model="data.message">
+        <h1>{{data.message}}</h1>
+      </div>
+      <div ng-controller="SecondCtrl">
+        <input type="text" ng-model="data.message">
+        <h1>{{data.message}}</h1>
+      </div>
+
+    </div>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
